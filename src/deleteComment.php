@@ -31,7 +31,7 @@ if ($row['wpass'] == $_POST['wpass']) {
 } else {
     echo "<script>alert('비밀번호가 틀렸습니다');";
 }
-echo "location.href='index.html'</script>";
+echo "location.href='showList.php'</script>";
 ?>
 </body>
 </html>

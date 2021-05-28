@@ -29,7 +29,7 @@ if ($row['wpass'] == $_POST['wpass']) {
     echo "location.href='editComment.php?wid=$_GET[wid]'</script>";
 } else {
     echo "<script>alert('비밀번호가 틀렸습니다');";
-    echo "location.href='index.html'</script>";
+    echo "location.href='showList.php'</script>";
 }
 ?>
 </body>

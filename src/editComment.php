@@ -8,7 +8,7 @@
 $conn = mysqli_connect("localhost", "goweb", "webproject333!");
 $db = mysqli_select_db($conn, "goweb");
 ?>
-<form method="post" action="updateComment.php?wid=<?= $_GET[wid] ?>">
+<form method="post" action="updateComment.php?wid=<?=$_GET['wid']?>">
     <table width=600 border=1>
         <tr>
             <td>게시글을 수정해주세요.</td>
