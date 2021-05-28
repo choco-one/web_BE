@@ -25,13 +25,12 @@ $sql = "SELECT wpass FROM guestbook WHERE wid='$_GET[wid]'";
 $result = $conn->query($sql);
 $row = $result->fetch_array();
 if ($row['wpass'] == $_POST['wpass']) {
-    $sql = "DELETE FROM guestbook WHERE wid='$_GET[wid]'";
-    $result = $conn->query($sql);
-    echo "<script>alert('글이 삭제되었습니다');";
+    echo "<script>alert('수정 페이지로 이동합니다');";
+    echo "location.href='editComment.php?wid=$_GET[wid]'</script>";
 } else {
     echo "<script>alert('비밀번호가 틀렸습니다');";
+    echo "location.href='index.html'</script>";
 }
-echo "location.href='index.html'</script>";
 ?>
 </body>
 </html>
