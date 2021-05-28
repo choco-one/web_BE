@@ -7,9 +7,9 @@
 <?php
 $conn = mysqli_connect("localhost", "goweb", "webproject333!");
 $db = mysqli_select_db($conn, "goweb");
-if ($_GET['mode']!="delete") {
+if ($_POST['wpass'] == null) {
     ?>
-    <form method="post" action="<?=$_SERVER[PHP_SELF]?>?id=<?=$_GET[wid]?>&mode='delete'">
+    <form method="post" action="">
         <table border=1>
             <tr>
                 <td>비밀번호</td>
@@ -19,6 +19,7 @@ if ($_GET['mode']!="delete") {
         </table>
     </form>
     <?php
+    echo $_POST['wpass'];
     exit;
 }
 $sql = "SELECT wpass FROM guestbook WHERE wid='$_GET[wid]'";
