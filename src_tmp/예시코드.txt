@@ -1,0 +1,17 @@
+App.js 코드
+
+<input type="button" value="get data" onClick={ function () {
+    fetch('/test.php?w3=' + props.address,{
+        headers:{
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json);
+        })
+}.bind(this)
+}/>

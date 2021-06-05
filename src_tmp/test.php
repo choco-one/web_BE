@@ -6,7 +6,7 @@ $dbName = 'goweb';
 
 $conn = mysqli_connect($host, $user, $pw, $dbName);
 
-$sql = "SELECT * FROM guestbook";
+$sql = "SELECT * FROM guestbook WHERE w3 = '$_GET[w3]'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 
